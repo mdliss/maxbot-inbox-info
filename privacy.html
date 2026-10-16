@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="How MaxBot private inbox accesses authorized sources, uses AI analysis, and retains summaries, tasks and delivery records."
+    />
+    <title>Privacy policy · MaxBot private inbox</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172b3a;
+        background: #f3f6f5;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+      a {
+        color: #075a72;
+        text-underline-offset: 0.2em;
+        overflow-wrap: anywhere;
+      }
+      a:focus-visible {
+        outline: 3px solid #b04c00;
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+      .skip {
+        position: absolute;
+        left: 1rem;
+        top: -5rem;
+        padding: 0.5rem 1rem;
+        background: white;
+      }
+      .skip:focus {
+        top: 1rem;
+      }
+      .wrap {
+        width: min(100% - 2.5rem, 48rem);
+        margin-inline: auto;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1.5rem;
+      }
+      .brand {
+        color: inherit;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      nav a[aria-current="page"] {
+        color: #172b3a;
+        font-weight: 650;
+      }
+      main {
+        padding: clamp(1.5rem, 5vw, 3rem);
+        border: 1px solid #d8e2df;
+        border-radius: 1.2rem;
+        background: #fff;
+      }
+      .eyebrow {
+        margin: 0 0 0.75rem;
+        color: #41605a;
+        font-size: 0.8rem;
+        font-weight: 650;
+        letter-spacing: 0.04em;
+      }
+      h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        line-height: 1.13;
+        letter-spacing: -0.03em;
+      }
+      h2 {
+        margin: 2rem 0 0.65rem;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      .note {
+        margin-top: 1.6rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #d8e2df;
+        color: #4c6168;
+        font-size: 0.93rem;
+      }
+      footer {
+        padding-block: 1.5rem 2.5rem;
+        color: #4c6168;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 420px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="wrap">
+      <a class="brand" href="./">MaxBot private inbox</a>
+      <nav aria-label="Main navigation">
+        <a href="./">Overview</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+    <main class="wrap" id="main">
+      <p class="eyebrow">Personal use · Google app name: clawd</p>
+      <h1>Privacy policy</h1>
+      <p>
+        This notice covers MaxBot private inbox, operated by Max Liss for
+        accounts he authorizes. It does not cover other tools that may share a
+        Google consent configuration.
+      </p>
+      <h2>Information accessed</h2>
+      <p>
+        Configured sources provide account identity, sender and conversation
+        metadata, subjects, message text, timestamps and source links. Enabled
+        Read AI access includes reports and transcript excerpts from meetings
+        the operator attended. Each connection requires dedicated account
+        authorization.
+      </p>
+      <h2>Purpose and AI processing</h2>
+      <p>
+        The inbox uses this information to identify follow-ups, commitments and
+        deadlines, prepare briefs and apply configured alert rules. Limited
+        message excerpts, metadata and retained summary or task context are sent
+        to OpenAI for analysis. Requests use its
+        <code>store: false</code> option; this is not a guarantee of zero
+        retention by the provider.
+      </p>
+      <h2>Stored information</h2>
+      <p>
+        Google Cloud Firestore stores derived summaries, source links, tasks,
+        processing checkpoints, fingerprints and delivery or completion
+        receipts. These records can contain private information. Full raw
+        message bodies and transcripts are not saved in inbox state. Authorized
+        infrastructure administrators retain access to stored data.
+      </p>
+      <h2>Delivery and account boundaries</h2>
+      <p>
+        Briefs and alerts are restricted to the configured operator’s private
+        Slack destination and own email. Slack and Google process those
+        deliveries. Personal Gmail access is read-only; optional alert email
+        requires separately authorized sending access. The inbox does not send
+        replies to other people or modify source messages.
+      </p>
+      <h2>Retention and control</h2>
+      <p>
+        There is no automatic deletion period. Removing or rebinding a source
+        clears its pending derived state on a later scan; delivery and
+        completion receipts may remain. Revoking a provider grant stops further
+        authorized access but does not itself erase stored summaries or
+        receipts. Contact the operator about removing retained data.
+      </p>
+      <h2>Contact</h2>
+      <p>
+        For privacy, access or deletion questions, contact Max Liss at
+        <a href="mailto:maxliss19@gmail.com">maxliss19@gmail.com</a>.
+      </p>
+      <p class="note">
+        Notice prepared October 16, 2026. These information pages contain no
+        forms or analytics scripts.
+      </p>
+    </main>
+    <footer class="wrap">
+      <a href="./">Back to overview</a> · Operated by Max Liss
+    </footer>
+  </body>
+</html>
