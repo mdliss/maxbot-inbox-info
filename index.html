@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="Information about MaxBot private inbox, a personal tool for reviewing messages, follow-ups and meeting commitments."
+    />
+    <title>MaxBot private inbox · clawd</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172b3a;
+        background: #f3f6f5;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+      a {
+        color: #075a72;
+        text-underline-offset: 0.2em;
+        overflow-wrap: anywhere;
+      }
+      a:focus-visible {
+        outline: 3px solid #b04c00;
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+      .skip {
+        position: absolute;
+        left: 1rem;
+        top: -5rem;
+        padding: 0.5rem 1rem;
+        background: white;
+      }
+      .skip:focus {
+        top: 1rem;
+      }
+      .wrap {
+        width: min(100% - 2.5rem, 48rem);
+        margin-inline: auto;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1.5rem;
+      }
+      .brand {
+        color: inherit;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      nav a[aria-current="page"] {
+        color: #172b3a;
+        font-weight: 650;
+      }
+      main {
+        padding: clamp(1.5rem, 5vw, 3rem);
+        border: 1px solid #d8e2df;
+        border-radius: 1.2rem;
+        background: #fff;
+      }
+      .eyebrow {
+        margin: 0 0 0.75rem;
+        color: #41605a;
+        font-size: 0.8rem;
+        font-weight: 650;
+        letter-spacing: 0.04em;
+      }
+      h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        line-height: 1.13;
+        letter-spacing: -0.03em;
+      }
+      h2 {
+        margin: 2rem 0 0.65rem;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      ul {
+        margin: 0.5rem 0 1rem;
+        padding-left: 1.25rem;
+      }
+      li + li {
+        margin-top: 0.45rem;
+      }
+      .lead {
+        font-size: 1.12rem;
+        color: #3a5260;
+      }
+      .note {
+        margin-top: 1.6rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #d8e2df;
+        color: #4c6168;
+        font-size: 0.93rem;
+      }
+      footer {
+        padding-block: 1.5rem 2.5rem;
+        color: #4c6168;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 420px) {
+        header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="wrap">
+      <a class="brand" href="./">MaxBot private inbox</a>
+      <nav aria-label="Main navigation">
+        <a href="./" aria-current="page">Overview</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+    <main class="wrap" id="main">
+      <p class="eyebrow">Personal use · Google app name: clawd</p>
+      <h1>MaxBot private inbox</h1>
+      <p class="lead">
+        A personal tool operated by Max Liss to review messages, follow-ups and
+        meeting commitments.
+      </p>
+      <h2>What it does</h2>
+      <p>
+        When enabled, the inbox reads the operator’s configured Gmail, Google
+        Chat and Slack sources, plus accessible Read AI meetings where the
+        operator attended.
+      </p>
+      <ul>
+        <li>
+          Summarizes requests that may need a reply and tracks evidenced
+          commitments and deadlines.
+        </li>
+        <li>Prepares a daily brief with links back to the original sources.</li>
+        <li>
+          Can send configured urgent alerts to the operator’s private Slack
+          destination or own email.
+        </li>
+      </ul>
+      <p>
+        AI-generated summaries can be incomplete or mistaken. Review the
+        original source before acting.
+      </p>
+      <h2>Account access</h2>
+      <p>
+        Connections require the operator’s authorization. The personal Gmail
+        connection is read-only. Optional email alerts require a separate
+        sending permission and go only to the configured account owner. The
+        inbox does not reply to other people or change source messages.
+      </p>
+      <p>
+        Read the <a href="privacy.html">privacy policy</a> for details about AI
+        processing, stored summaries and retention.
+      </p>
+      <p class="note">
+        These pages describe the MaxBot private inbox integration only. They do
+        not describe other tools that may use the same Google consent
+        configuration.
+      </p>
+    </main>
+    <footer class="wrap">
+      Operated by Max Liss ·
+      <a href="mailto:maxliss19@gmail.com">maxliss19@gmail.com</a>
+    </footer>
+  </body>
+</html>
